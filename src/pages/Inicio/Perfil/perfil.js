@@ -14,7 +14,7 @@ export default function ({route,navigation}){
                 <View style={styles.containerImagem}>
                 <Image source={{uri:route.params.perfil.profile_image}} style={{flex:1}}></Image>
                 </View>
-                <Pressable style={styles.container} onPress={()=> navigation.navigate('historico')} >
+                <Pressable style={styles.container} onPress={()=> navigation.navigate('historico',route)} >
                         <Text style={styles.texto}>Seu histórico</Text>
                 </Pressable>
                 <Pressable style={styles.container} onPress={()=> navigation.navigate('Sobre o app')}>

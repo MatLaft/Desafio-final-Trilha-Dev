@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
         margin:8,
         borderRadius: 18,
         width: 343,
-        height:275,
+        height:297,
         flex:1,
         overflow:'hidden',
     },
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
         fontSize:24,
         left:16,
         color:'#3C3A36',
-        marginTop:16,
+        marginTop:38,
     },
     subtitle:{
         fontWeight:'400',
@@ -148,6 +148,26 @@ const styles = StyleSheet.create({
         left:16,
         color:'#3C3A36',
         marginTop:4,
+    },
+    lista:{
+        alignSelf:'center',
+        marginTop:20
+    },
+    acertadas:{
+        position:'absolute',
+        fontSize:12,
+        top:210,
+        left:16,
+        color:'#5BA092',
+        fontWeight:'500',
+    },
+    data:{
+        position: 'absolute',
+        top:210,
+        right:16,
+        fontSize:12,
+        fontWeight:'500',
+        color:'#78746D'
     }
 })
 export default styles

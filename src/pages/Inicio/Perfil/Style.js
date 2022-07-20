@@ -60,7 +60,57 @@ const styles = StyleSheet.create({
         fontSize:40,
         marginTop:16,
         color:'#3C3A36',
-        alignSelf:'center'}
+        alignSelf:'center'
+    },
+    lista:{
+        alignSelf:'center',
+    },
+    item:{
+        borderWidth:1,
+        borderColor:'#BEBAB3',
+        margin:8,
+        borderRadius: 18,
+        width: 343,
+        height:275,
+        flex:1,
+        overflow:'hidden',
+    },
+    imagems:{
+        height:194,
+        overflow:'hidden',
+    },
+    textoimagemcontainer:{
+        backgroundColor:'#65AAEA',
+        paddingHorizontal:11,
+        justifyContent:'center',
+        alignItems:'center',
+        alignContent:'center',
+        borderRadius:12,
+        marginBottom:25,
+        width:72,
+        left:255,
+        top:162,
+        height:24
+    },
+    textoimagem:{
+        color:'#F2F2F2',
+        fontSize:14,
+        fontWeight:'500',
+    },
+    title:{
+        fontWeight:'500',
+        fontSize:24,
+        left:16,
+        color:'#3C3A36',
+        marginTop:16,
+    },
+    subtitle:{
+        fontWeight:'400',
+        fontSize:14,
+        left:16,
+        color:'#3C3A36',
+        marginTop:4,
+    }
         
 })
 
