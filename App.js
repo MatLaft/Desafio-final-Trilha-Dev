@@ -23,6 +23,7 @@ import Configs from './src/pages/Inicio/Configs/Configs';
 import perfil from './src/pages/Inicio/Perfil/perfil';
 import Historico from './src/pages/Inicio/Perfil/Historico';
 import Sobre from './src/pages/Inicio/Perfil/Sobre';
+import Search from './src/pages/Inicio/Quizzes/Search';
 
 
 
@@ -55,6 +56,7 @@ export default function App() {
         <Stack.Screen name = 'TelaInicial' component = {Tabs}  options={{ headerShown: false }} />
         <Stack.Screen name = 'Sobre o app' component = {Sobre}  options={{ headerShown: false }} />
         <Stack.Screen name = 'historico' component = {Historico}  options={{ headerShown: false }} />
+        <Stack.Screen name = 'Search' component = {Search}  options={{ headerShown: false }} />
       </Stack.Navigator>
     <StatusBar style="auto" />
     </NavigationContainer>

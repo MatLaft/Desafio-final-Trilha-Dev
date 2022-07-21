@@ -22,18 +22,44 @@ const style = StyleSheet.create({
         color:'#3C3A36'
     },
     input:{
-        width: '90%',
+        borderColor:'#BEBAB3',
+    },
+    inputpesquisa:{
+        width: 287,
         borderRadius:12,
         backgroundColor: '#fff',
         height : 60,
-        margin:12,
         paddingLeft: 10,
         borderWidth:1,
         borderColor:'#BEBAB3',
-        alignSelf:'center'
+        alignSelf:'center',
+        position: 'absolute',
+        left:72,
+        top:60,
+        justifyContent:'center',
+    },
+    inputpesquisainicio:{
+        width: 343,
+        margin:12,
+        borderRadius:12,
+        backgroundColor: '#fff',
+        height : 60,
+        paddingLeft: 10,
+        borderWidth:1,
+        borderColor:'#BEBAB3',
+        alignSelf:'center',
+        justifyContent:'center',
     },
     lista:{
         alignSelf:'center',
+    },
+    lista1:{
+        alignSelf:'center',
+        top:50
+    },
+    listabusca:{
+        alignSelf:'center',
+        top:125
     },
     listahorizontal:{
         left:16,
@@ -99,6 +125,42 @@ const style = StyleSheet.create({
         color:'#F2F2F2',
         fontSize:14,
         fontWeight:'500',
+    },
+    voltar:{
+        borderWidth:1,
+        borderColor:'#BEBAB3',
+        width: 48,
+        height:48,
+        justifyContent:'center',
+        alignContent:'center',
+        position: 'absolute',
+        alignItems:'center',
+        top:64,
+        left:16,
+        borderRadius:100
+    },
+    lupa:{
+        position: 'absolute',
+        right: 18,
+    },
+    resultado:{
+        position:'absolute',
+        top:10,
+        left:16,
+        fontWeight:'500',
+        fontSize:24
+    },
+    textopesquisa:{
+        fontWeight:'500',
+        fontSize:24,
+        color:'#3C3A36',
+    },
+    textopesquisa2:{
+        fontWeight:'400',
+        fontSize:14,
+        color:'#78746D',
+        textAlign:'center',
+        marginTop:8
     }
 })
 
