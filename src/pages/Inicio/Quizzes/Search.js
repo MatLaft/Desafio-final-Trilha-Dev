@@ -47,7 +47,7 @@ export default function ({route,navigation}){
 
     <SafeAreaView style={styles.container}>
         <View style={styles.inputpesquisa}>
-            <TextInput onChangeText={setPesquisa} value={pesquisa} placeholder="Pesquisa quiz" style={styles.input}></TextInput>
+            <TextInput onChangeText={setPesquisa} value={pesquisa} placeholder="Digite sua pesquisa aqui..." style={styles.input}></TextInput>
             <Icon name='search' size={20} style={styles.lupa}></Icon>
         </View>
         <Pressable style={styles.voltar} onPress={()=>navigation.navigate('Quizzes')} ><Icon name='angle-left' size={19} style={{color:'#3C3A36'}}></Icon></Pressable>
@@ -63,9 +63,10 @@ export default function ({route,navigation}){
                         keyExtractor={item => item.id}
                         />
                 </View>:
-            <View style={{justifyContent:'center',alignItems:'center',height:'80%',top:80}}>
-                <Image source={require('../../../../assets/CoolKidsStanding.png')} style={{backgroundColor:'#000',width:300,height:300}}></Image>
-                <Text>asdasd</Text>
+            <View style={{justifyContent:'center',alignItems:'center',height:'80%',top:50}}>
+                <Image source={require('../../../../assets/CoolKidsStanding.png')} style={{width:300,height:300}}></Image>
+                <Text style={styles.textopesquisa}>Quiz não encontrado</Text>
+                <Text style={styles.textopesquisa2}>Não encontramos nenhum quiz. Tente procurar usando palavras chaves diferentes...</Text>
             </View>:
 
         <View style={{justifyContent:'center',alignItems:'center',height:'80%',top:80}}>

@@ -41,7 +41,7 @@ export default function ({route,navigation}){
         <Text style={styles.textomenor}>Hello,</Text>
         <Text style={styles.textomaior}>{perfil.name}</Text>
         <Pressable style={styles.inputpesquisainicio} onPress={()=>navigation.navigate('Search')}>
-            <TextInput onChangeText={setPesquisa} value={pesquisa} placeholder="Pesquisa quiz" style={styles.input}></TextInput>
+            <Text  style={styles.input}>Pesquisa quiz</Text>
             <Icon name='search' size={20} style={styles.lupa}></Icon>
         </Pressable>
         <FlatList
