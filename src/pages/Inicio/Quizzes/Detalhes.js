@@ -2,15 +2,31 @@ import React from "react";
 import { View,Text, TextInput,TouchableOpacity,SafeAreaView,Pressable,Image} from "react-native";
 import styles from "./Style";
 import Icon from 'react-native-vector-icons/FontAwesome5'
+import axios from 'axios';
+
+async function getUser(busca) {
+    try {
+      const historico = await (await axios.get(`https://my-json-server.typicode.com/higorpo/trilha-dev-json-server/questions/${busca}`)).data;
+      return historico.data;
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
 
 
 export default function ({route,navigation}){
     const quiz = route.params
+    async function mudarTela(){
+        let x = await getUser(quiz.id)
+        navigation.navigate('Perguntas',x)
+  
+    } 
+
     return(
-        <View style={{backgroundColor:'#fff',height:'100%',width:'100%',overflow:'contain',}}>
+        <View  style={{backgroundColor:'#fff',height:'100%',width:'100%',overflow:'contain',}}>
             <Pressable style={styles.voltar} onPress={()=>navigation.navigate('Perfil')} ><Icon name='angle-left' size={19} style={{color:'#3C3A36'}}></Icon></Pressable>
-            <Text style={styles.titulo}>{quiz.title}</Text>
+            <Text  style={styles.titulo}>{quiz.title}</Text>
             <Image source={{uri:quiz.banner_image}} style={styles.imagemDetalhe}></Image>
             <View style={styles.textoimagemcontainer2}>
                 <Text style={styles.textoimagem}>{quiz.difficulty}</Text>

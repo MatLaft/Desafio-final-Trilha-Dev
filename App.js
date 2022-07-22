@@ -23,6 +23,7 @@ import Historico from './src/pages/Inicio/Perfil/Historico';
 import Sobre from './src/pages/Inicio/Perfil/Sobre';
 import Search from './src/pages/Inicio/Quizzes/Search';
 import Detalhes from './src/pages/Inicio/Quizzes/Detalhes';
+import Perguntas from './src/pages/Inicio/Quizzes/Perguntas/Perguntas';
 
 
 
@@ -71,6 +72,7 @@ export default function App() {
         <Stack.Screen name = 'historico' component = {Historico}  options={{ headerShown: false }} />
         <Stack.Screen name = 'Search' component = {Search}  options={{ headerShown: false }} />
         <Stack.Screen name = 'Detalhes' component = {Detalhes}  options={{ headerShown: false }} />
+        <Stack.Screen name = 'Perguntas' component = {Perguntas}  options={{ headerShown: false }} />
       </Stack.Navigator>
     <StatusBar style="auto" />
     </NavigationContainer>
