@@ -122,6 +122,20 @@ const style = StyleSheet.create({
         top:162,
         height:24
     },
+    textoimagemcontainer2:{
+        backgroundColor:'#65AAEA',
+        paddingHorizontal:11,
+        justifyContent:'center',
+        alignItems:'center',
+        alignContent:'center',
+        borderRadius:12,
+        marginBottom:25,
+        width:72,
+        left:280,
+        top:132,
+        height:24
+    },
+
     textoimagem:{
         color:'#F2F2F2',
         fontSize:14,
@@ -162,7 +176,52 @@ const style = StyleSheet.create({
         color:'#78746D',
         textAlign:'center',
         marginTop:8
-    }
+    },
+    titulo:{
+        top:64,
+        alignSelf:'center',
+        fontSize:24,
+        fontWeight:'500',
+        color:'#3C3A36',
+        width:200,
+        textAlign:'center'
+
+    },
+    imagemDetalhe:{
+        height:200,
+        width:'100%',
+        top:108,
+        alignSelf:'center',
+        resizeMode:'contain',
+        borderColor:'#3C3A36'
+    },
+    botao:{
+        alignSelf:'center',
+        alignItems:'center',
+        justifyContent:'center',
+        backgroundColor:'#82327E',
+        borderRadius:12,
+        height:60,
+        width:'90%',
+        top:270
+    },
+    botao2:{
+        alignSelf:'center',
+        alignItems:'center',
+        justifyContent:'center',
+        backgroundColor:'#82327E',
+        position:'absolute',
+        borderRadius:12,
+        height:60,
+        width:'90%',
+        top:700
+    },
+    textoBotao:{
+        fontSize:16,
+        fontWeight:'500',
+        color:'#FFF'
+    },
+
 })
 
 export default style

@@ -6,7 +6,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFF',
         width: '100%',
         height:'100%',
-        alignItems:'center'
     },
     item:{
         marginTop:47,
@@ -28,11 +27,17 @@ const styles = StyleSheet.create({
         color:'#3C3A36'
     },
     botao:{
-        marginTop:40,
+        
         backgroundColor:'#82327E',
         borderRadius:16,
         paddingTop:3,
-        paddingBottom:3
+        paddingBottom:3,
+        width:311,
+        height:56,
+        alignItems:'center',
+        alignSelf:'center',
+        top:20
+
     },
     botaoskip:{
         backgroundColor:'#000',
@@ -47,7 +52,8 @@ const styles = StyleSheet.create({
         textAlign:'center',
         color:'#FFF',
         margin: 12,
-        marginHorizontal:120
+        marginHorizontal:120,
+        width:'100%'
     },
     textoskip:{
         fontWeight:'500',
@@ -56,7 +62,8 @@ const styles = StyleSheet.create({
         margin: 12,
         marginHorizontal:20,
         marginTop:58,
-        marginLeft:320
+        marginLeft:320,
+        
     }
 });
 
