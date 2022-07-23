@@ -23,7 +23,16 @@ const style = StyleSheet.create({
     },
     input:{
         borderColor:'#BEBAB3',
-        color:'#78746D'
+        color:'#78746D',
+        justifyContent:'center',
+        height:'100%'
+
+    },
+    input2:{
+        borderColor:'#BEBAB3',
+        color:'#78746D',
+        justifyContent:'center',
+
     },
     inputpesquisa:{
         width: 287,

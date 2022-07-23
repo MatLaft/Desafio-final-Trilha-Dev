@@ -31,7 +31,7 @@ const ItemQuizz = ({ title,navigation}) => (
   );
 
 export default function ({route,navigation}){
-    const [pesquisa,setPesquisa] = useState('')
+  const [pesquisa,setPesquisa] = useState(`${route.params?route.params:''}`)
     const [listaquiz,setlistaquiz] = useState([])
     const getData = async () => {
         const lista = await getUser(pesquisa)

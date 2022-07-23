@@ -4,13 +4,13 @@ import styles from "./Style";
 import Icon from 'react-native-vector-icons/FontAwesome5'
 
 
-const Item = ({title}) => (
-  <TouchableOpacity style={styles.itemhorizontal} onPress={()=>navigation.navigate('Login')}>
+const Item = ({title,navigation}) => (
+  <TouchableOpacity style={styles.itemhorizontal} onPress={()=>navigation.navigate('Search',title)}>
     <Text style={styles.textolistahorizontal}>#{title}</Text>
   </TouchableOpacity>
 );
-const renderItem = ({ item }) => (
-  <Item title={item.search} />
+const renderItem = ({  item,navigation }) => (
+  <Item title={item.search} navigation={navigation} />
 );
 
 const ItemQuizz = ({ title,navigation}) => (
@@ -33,22 +33,31 @@ export default function ({route,navigation}){
     let listaquiz = route.params.listaquiz
     let perfil = route.params.perfil
     const [pesquisa,setPesquisa] = useState(null)
-    
-    
+    const hashtags = []
+    const tirarDupiclado = listaquiz.filter(objeto =>{
+      const ehduplicado = hashtags.includes(objeto.search)
+      if (!ehduplicado){
+        hashtags.push(objeto.search)
+        return true
+      }else{
+        return false
+      }
+    }
 
+    )
     return(
     <SafeAreaView style={styles.container}>
         <Text style={styles.textomenor}>Hello,</Text>
         <Text style={styles.textomaior}>{perfil.name}</Text>
         <Pressable style={styles.inputpesquisainicio} onPress={()=>navigation.navigate('Search')}>
-            <Text  style={styles.input}>Pesquisa quiz</Text>
+            <Text  style={styles.input2}>Pesquisa quiz</Text>
             <Icon name='search' size={20} style={styles.lupa}></Icon>
         </Pressable>
         <FlatList
             horizontal={true}
             style={styles.listahorizontal}
-            data={listaquiz}
-            renderItem={renderItem}
+            data={tirarDupiclado}
+            renderItem={({item})=>renderItem({item,navigation})}
             keyExtractor={item => item.id}
         />
         <FlatList

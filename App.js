@@ -63,7 +63,7 @@ function Tabs({route}){
 export default function App() {
   return ( 
     <NavigationContainer>
-    <Stack.Navigator /*screenOptions={{gestureEnabled: false}}*/>
+    <Stack.Navigator screenOptions={{gestureEnabled: false}}>
         <Stack.Screen name = 'Intro1' component = {Intro1}  options={{ headerShown: false }}/>
         <Stack.Screen name = 'Login' component = {Login}  options={{ headerShown: false }}/>
         <Stack.Screen name = 'Recuperar' component = {Recuperar}  options={{ headerShown: false }}/>
