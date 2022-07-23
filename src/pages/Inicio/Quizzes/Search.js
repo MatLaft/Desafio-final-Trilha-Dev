@@ -16,7 +16,7 @@ async function getUser(busca) {
 
 const ItemQuizz = ({ title,navigation}) => (
     
-    <Pressable style={styles.item} onPress={()=>navigation.navigate('Login')}>
+    <Pressable style={styles.item} onPress={()=>navigation.navigate('Detalhes',title)}>
       <ImageBackground source={{uri:title.banner_image}} style={styles.imagem}>
       <View style={styles.textoimagemcontainer}>
       <Text style={styles.textoimagem}>{title.difficulty}</Text>

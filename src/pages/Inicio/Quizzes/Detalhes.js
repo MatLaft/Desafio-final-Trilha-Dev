@@ -19,13 +19,13 @@ export default function ({route,navigation}){
     const quiz = route.params
     async function mudarTela(){
         let x = await getUser(quiz.id)
-        navigation.navigate('Perguntas',x)
+        navigation.navigate('Perguntas',[x,quiz])
   
     } 
 
     return(
         <View  style={{backgroundColor:'#fff',height:'100%',width:'100%',overflow:'contain',}}>
-            <Pressable style={styles.voltar} onPress={()=>navigation.navigate('Perfil')} ><Icon name='angle-left' size={19} style={{color:'#3C3A36'}}></Icon></Pressable>
+            <Pressable style={styles.voltar} onPress={()=>navigation.navigate('Quizzes')} ><Icon name='angle-left' size={19} style={{color:'#3C3A36'}}></Icon></Pressable>
             <Text  style={styles.titulo}>{quiz.title}</Text>
             <Image source={{uri:quiz.banner_image}} style={styles.imagemDetalhe}></Image>
             <View style={styles.textoimagemcontainer2}>
